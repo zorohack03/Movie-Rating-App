@@ -1,70 +1,68 @@
-# Movie Rating App
+## Movie Rating App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a ReactJS-based movie rating application that allows users to search for movies, view detailed information. The app leverages the OMDB API to fetch movie data and provides a seamless user experience with an intuitive interface.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+1. **Search for Movies**:
+   - Users can search for movies using the search bar in the navigation bar.
+   - The app fetches movie data from the OMDB API and displays search results in a grid format.
 
-### `npm start`
+2. **Movie List Display**:
+   - The search results are displayed as a list of movie cards, showing the movie poster, title, and year of release.
+   - Clicking on a movie card navigates to the detailed view of the selected movie.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Movie Details View**:
+   - Detailed information about the selected movie, including the poster, title, year, rating, release date, runtime, genre, director, writer, actors, plot, language, country, awards, metascore, IMDb rating, and IMDb votes.
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **User Authentication**:
+   - A simple login page for user authentication.
 
-### `npm test`
+### File Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **`App.js`**: Main component that sets up routing and state management.
+- **`NavBar.js`**: Navigation bar with links to Home, My List, and Login pages, including a search bar.
+- **`SearchBox.js`**: Component for the search bar used in the navigation bar.
+- **`MovieList.js`**: Component to display a list of movies based on the search query.
+- **`MovieDetails.js`**: Component to display detailed information about a selected movie.
+- **`Login.js`**: Component for user login.
+- **`MyList.js`**: Component to display and manage the user's personal movie list.
+- **`MovieListContext.js`**: Context to manage the global state of the movie list.
+- **CSS Files**: Styling for various components (`App.css`, `NavBar.css`, `MovieList.css`, `MyList.css`, `Login.css`).
 
-### `npm run build`
+### Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/yourusername/movieratingapp.git
+   cd movieratingapp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**:
+   ```sh
+   npm install -g npm@10.7.0
+   npm fund
+3. **Run the app:**:
+   ```sh
+   npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser:**:
+   ```sh
+   http://localhost:3000
 
-### `npm run eject`
+## Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- React Router DOM
+- OMDB API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Search for movies using the search bar.
+- Click on a movie to view its details.
+- Login using the login page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- OMDB API for providing the movie data.
