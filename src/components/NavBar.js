@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import SearchBox from './SearchBox';
-import './NavBar.css';
+import '../App.css';
 
 function NavBar({ onSearch }) {
   const location = useLocation();
