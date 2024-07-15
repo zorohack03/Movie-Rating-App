@@ -1,6 +1,6 @@
 ## Movie Rating App
 
-This is a ReactJS-based movie rating application that allows users to search for movies, view detailed information. The app leverages the OMDB API to fetch movie data and provides a seamless user experience with an intuitive interface.
+This is a ReactJS-based movie rating application that allows users to search for movies, view detailed information ,add movies to mylist. The app leverages the OMDB API to fetch movie data and provides a seamless user experience with an intuitive interface.
 
 ### Features
 
@@ -18,6 +18,13 @@ This is a ReactJS-based movie rating application that allows users to search for
 
 4. **User Authentication**:
    - A simple login page for user authentication.
+  
+5. **My Movie List Display**:
+   - Users can add their liked movies in my movie list .
+   - Users can also remove movies from my movie list.
+
+6. **Comment Section**:
+   - Users can comment any movie in a anonymous manner(Username won't be displayed).
 
 ### File Structure
 
@@ -29,7 +36,7 @@ This is a ReactJS-based movie rating application that allows users to search for
 - **`Login.js`**: Component for user login.
 - **`MyList.js`**: Component to display and manage the user's personal movie list.
 - **`MovieListContext.js`**: Context to manage the global state of the movie list.
-- **CSS Files**: Styling for various components (`App.css`, `NavBar.css`, `MovieList.css`, `MyList.css`, `Login.css`).
+- **CSS File**: Styling for various components (`App.css`).
 
 ### Getting Started
 
@@ -61,6 +68,8 @@ This is a ReactJS-based movie rating application that allows users to search for
 - Search for movies using the search bar.
 - Click on a movie to view its details.
 - Login using the login page.
+- Add movies to mylist.
+- Comment any movies .
 
 
 ## Acknowledgments
