@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
@@ -16,7 +16,7 @@ function App() {
   const fetchMovies = async (query) => {
     setHasSearched(true);
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=2cf36365`);
+      const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=d7a61a8`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -34,6 +34,32 @@ function App() {
     }
   };
 
+  const fetchRandomMovies = async () => {
+    try {
+      const queries = ['action', 'comedy', 'drama', 'horror', 'romance', 'sci-fi'];
+      const randomQuery = queries[Math.floor(Math.random() * queries.length)];
+      const response = await fetch(`http://www.omdbapi.com/?s=${randomQuery}&apikey=d7a61a8`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      if (data.Response === "True") {
+        setMovies(data.Search);
+        setError('');
+      } else {
+        setError(data.Error);
+        setMovies([]);
+      }
+    } catch (error) {
+      setError('Failed to fetch random movies');
+      setMovies([]);
+    }
+  };
+
+  useEffect(() => {
+    fetchRandomMovies();
+  }, []);
+
   const handleLogin = () => {
     // Handle login logic here
     console.log('User logged in');
@@ -44,7 +70,6 @@ function App() {
       <Router>
         <div className="App">
           <NavBar onSearch={fetchMovies} />
-          <h1>Movie List</h1>
           {error && <p>{error}</p>}
           <Routes>
             <Route path="/" element={<MovieList movies={movies} hasSearched={hasSearched} />} />
